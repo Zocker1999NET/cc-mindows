@@ -15,11 +15,16 @@ end
 
 local coroutine = _ENV.coroutine
 if sysType:sub(1,2) == "oc" and coroutine == nil then
-	
+	coroutine = require("coroutine")
 end
 
 local thread = coroutine.create()
 
 local function resume(...)
-	local ok,err = coroutine.
+	local ok,err = coroutine.resume(thread,...)
+	if not ok then
+		if type(err) ~= "string" then
+			
+		end
+	end
 end
