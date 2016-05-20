@@ -1,0 +1,3 @@
+-- ComputerCraft Startup File
+-- For a auto-start experience
+shell.run("/mindows/startup.lua")
